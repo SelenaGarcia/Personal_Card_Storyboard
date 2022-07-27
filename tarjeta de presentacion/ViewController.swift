@@ -7,12 +7,36 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
+
+    @IBOutlet weak var imageProfile: UIImageView!
+
+    @IBOutlet weak var phoneView: UIView!
+
+    @IBOutlet weak var mailView: UIView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        imageProfile.layer.borderWidth = 5
+        imageProfile.layer.borderColor = UIColor.white.cgColor
+        imageProfile.layer.cornerRadius = imageProfile.frame.size.width/2
+        imageProfile.clipsToBounds = true
+
+
+
+
+        phoneView.layer.cornerRadius = 50
+        phoneView.clipsToBounds = true
+
+        mailView.layer.cornerRadius = 50
+        mailView.clipsToBounds = true
+
     }
+
+
 
 
 }
